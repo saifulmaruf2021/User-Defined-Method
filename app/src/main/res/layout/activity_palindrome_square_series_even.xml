@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Palindrome_Square_Series_Even">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_design_three"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp"
+                >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="আপনি কত নং এর জোড় সংখ্যা এবং এর সর্বমোট দেখতে চান?"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/teal_700"
+            android:gravity="center"
+            android:background="@drawable/custom_design"
+            />
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/bSubmit1"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:text="SUBMIT"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#00BCD4"
+                app:neumorph_shadowColorDark="#00BCD4"
+                >
+
+            </soup.neumorphism.NeumorphButton>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="basin"
+                app:neumorph_shadowColorDark="#05C8A1"
+                >
+
+                <EditText
+                    android:id="@+id/edInput1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:hint="input number"
+                    android:background="@null"
+                    android:layout_margin="5dp"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    />
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_shapeType="basin"
+            android:layout_gravity="center"
+            app:neumorph_shadowColorDark="#BCFB0303"
+            >
+
+            <EditText
+                android:id="@+id/tvResult1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="Result"
+                android:textSize="18sp"
+                android:textColor="#111212"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_margin="5dp"/>
+        </soup.neumorphism.NeumorphCardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                >
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:neumorph_shapeType="basin"
+            android:layout_gravity="center"
+            app:neumorph_shadowColorDark="#BCFB0303"
+            >
+
+
+            <EditText
+                android:id="@+id/edSum1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="Sum"
+                android:textSize="18sp"
+                android:textColor="#111212"
+                android:textStyle="bold"/>
+        </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/bReset1"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="270dp"
+                    android:layout_height="60dp"
+                    android:text="RESET"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#E91E63"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    app:neumorph_shadowColorDark="#E91E63"
+                    >
+
+                </soup.neumorphism.NeumorphButton>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_design_three"
+            android:layout_marginTop="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি কত নং এর সিরিজ সংখ্যা এবং এর সর্বমোট দেখতে চান?"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/teal_700"
+                    android:gravity="center"
+                    android:background="@drawable/custom_design"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/bSubmit2"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:text="SUBMIT"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#00BCD4"
+                    app:neumorph_shadowColorDark="#00BCD4"
+                    >
+
+                </soup.neumorphism.NeumorphButton>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:neumorph_shapeType="basin"
+                    app:neumorph_shadowColorDark="#05C8A1"
+                    >
+
+                    <EditText
+                        android:id="@+id/edInput2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="input number"
+                        android:background="@null"
+                        android:layout_margin="5dp"
+                        android:textStyle="italic"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="basin"
+                android:layout_gravity="center"
+                app:neumorph_shadowColorDark="#BCFB0303"
+                >
+
+                <EditText
+                    android:id="@+id/tvResult2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="Result"
+                    android:textSize="18sp"
+                    android:textColor="#111212"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"/>
+            </soup.neumorphism.NeumorphCardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                >
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    app:neumorph_shapeType="basin"
+                    android:layout_gravity="center"
+                    app:neumorph_shadowColorDark="#BCFB0303"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/edSum2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="Sum"
+                        android:textSize="18sp"
+                        android:textColor="#111212"
+                        android:textStyle="bold"/>
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/bReset2"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="270dp"
+                    android:layout_height="60dp"
+                    android:text="RESET"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#E91E63"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    app:neumorph_shadowColorDark="#E91E63"
+                    >
+
+                </soup.neumorphism.NeumorphButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_design_three"
+            android:layout_marginTop="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি কত নং এর স্কোয়ার সংখ্যা এবং এর সর্বমোট দেখতে চান?"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/teal_700"
+                    android:gravity="center"
+                    android:background="@drawable/custom_design"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/bSubmit3"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:text="SUBMIT"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#00BCD4"
+                    app:neumorph_shadowColorDark="#00BCD4"
+                    >
+
+                </soup.neumorphism.NeumorphButton>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:neumorph_shapeType="basin"
+                    app:neumorph_shadowColorDark="#05C8A1"
+                    >
+
+                    <EditText
+                        android:id="@+id/edInput3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="input number"
+                        android:background="@null"
+                        android:layout_margin="5dp"
+                        android:textStyle="italic"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="basin"
+                android:layout_gravity="center"
+                app:neumorph_shadowColorDark="#BCFB0303"
+                >
+
+                <EditText
+                    android:id="@+id/tvResult3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="Result"
+                    android:textSize="18sp"
+                    android:textColor="#111212"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"/>
+            </soup.neumorphism.NeumorphCardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                >
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    app:neumorph_shapeType="basin"
+                    android:layout_gravity="center"
+                    app:neumorph_shadowColorDark="#BCFB0303"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/edSum3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="Sum"
+                        android:textSize="18sp"
+                        android:textColor="#111212"
+                        android:textStyle="bold"/>
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/bReset3"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="270dp"
+                    android:layout_height="60dp"
+                    android:text="RESET"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#E91E63"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    app:neumorph_shadowColorDark="#E91E63"
+                    >
+
+                </soup.neumorphism.NeumorphButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_design_three"
+            android:layout_marginTop="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="আপনি কত নং এর পেলিনড্রম সংখ্যা দেখতে চান?"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/teal_700"
+                    android:gravity="center"
+                    android:background="@drawable/custom_design"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="পেলিনড্রম হচ্ছেঃ কোনো সংখ্যাকে রিভার্স করলেও একই হয়। যেমন- ১২১।"
+                    android:gravity="center"
+                    android:textColor="#9C27B0"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="@drawable/custom_design"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/bSubmit4"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:text="SUBMIT"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#00BCD4"
+                    app:neumorph_shadowColorDark="#00BCD4"
+                    >
+
+                </soup.neumorphism.NeumorphButton>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:neumorph_shapeType="basin"
+                    app:neumorph_shadowColorDark="#05C8A1"
+                    >
+
+                    <EditText
+                        android:id="@+id/edInput4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="input number"
+                        android:background="@null"
+                        android:layout_margin="5dp"
+                        android:textStyle="italic"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        />
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="basin"
+                android:layout_gravity="center"
+                app:neumorph_shadowColorDark="#BCFB0303"
+                >
+
+                <EditText
+                    android:id="@+id/tvResult4"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="Result"
+                    android:textSize="18sp"
+                    android:textColor="#111212"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"/>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/bReset4"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:text="RESET"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="#E91E63"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:neumorph_shadowColorDark="#E91E63"
+                android:layout_marginBottom="10dp"
+                >
+
+            </soup.neumorphism.NeumorphButton>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
